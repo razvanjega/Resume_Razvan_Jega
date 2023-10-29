@@ -1,2 +1,2 @@
 # My Resume
-See my resume [here](https://razvanjega.github.io/Resume_Razvan_Jega/)
+You can find my online resume [here](https://razvanjega.github.io/Resume_Razvan_Jega/)
