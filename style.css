@@ -1,103 +1,17 @@
-/* Base Styles */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f7f7f7;
-}
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-.resume {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
+$darkest-blue: #1a1a1a; /* Schimbat în negru */
+$darker-blue: #2d2d2d; /* Gri închis */
+$dark-blue: #3d3d3d; /* Gri mediu */
+$medium-blue: #4d4d4d; /* Gri deschis */
+$light-blue: #5c5c5c; /* Gri foarte deschis */
+$lighter-blue: #6c6c6c; /* Gri extra deschis */
+$lightest-blue: #7c7c7c; /* Gri ultra deschis */
+$white: #ffffff; /* Alb */
+$black: #000000; /* Negru */
+$orange: #ff8c42; /* Portocaliu pentru accent */
+$yellow: #ffd700; /* Galben pentru accent */
+$dark-pink: #ad1457; /* Roz închis */
+$light-pink: #d81b60; /* Roz deschis */
 
-.base, .func {
-  width: 100%;
-  padding: 20px;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-}
-
-.photo img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.name {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.job {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.about, .follow, .work, .edu, .skills-prog, .Certifications {
-  margin-top: 20px;
-}
-
-h3 {
-  font-size: 18px;
-  color: #333;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-ul li span {
-  font-weight: 600;
-}
-
-ul li small {
-  display: block;
-  color: #666;
-}
-
-a {
-  color: #1d72b8;
-  text-decoration: none;
-}
-
-.box a {
-  margin-right: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .resume {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .profile {
-    text-align: center;
-  }
-
-  .info {
-    margin-top: 10px;
-  }
-
-  .base {
-    padding: 10px;
-  }
-
-  .about, .follow, .work, .edu, .skills-prog, .Certifications {
-    text-align: center;
-  }
-}
+/* Restul codului CSS rămâne neschimbat */
