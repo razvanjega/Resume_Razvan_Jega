@@ -1,44 +1,74 @@
-/* Stilizare pentru poza de profil */
-.profile {
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  position: relative;
-}
-
-.photo img {
-  width: 120px;  /* Dimensiunea imaginii */
-  height: 120px; /* Dimensiunea imaginii */
-  border-radius: 50%; /* Face imaginea rotundă */
-  position: absolute; /* Poziționarea imaginii în stânga sus */
-  top: 0;
-  left: 0;
-  border: 3px solid #fff; /* Border alb pentru a scoate imaginea în evidență */
-}
-
-.info {
-  margin-left: 140px; /* Lăsăm spațiu pentru imaginea de profil */
-}
-
-.name, .job {
-  margin: 5px 0;
-}
-
-/* Responsivitate */
-@media (max-width: 768px) {
-  .profile {
-    text-align: center;
-    position: relative;
-  }
-
-  .photo img {
-    width: 100px;
-    height: 100px;
-    position: static;
-    margin: 0 auto;
-  }
-
-  .info {
-    margin-left: 0;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Razvan Jega - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="resume">
+    <div class="base">
+      <div class="profile">
+        <div class="photo">
+          <img src="src/ProfilePicture.png" alt="Razvan Jega">
+        </div>
+        <div class="info">
+          <h1 class="name">Razvan Jega</h1>
+          <h2 class="job">Technical Support Specialist</h2>
+          <p>Cluj-Napoca, Cluj, Romania</p>
+          <p><a href="https://www.linkedin.com/in/razvanjega/" target="_blank">LinkedIn</a> | <a href="https://github.com/razvanjega" target="_blank">GitHub</a></p>
+        </div>
+      </div>
+      <div class="about">
+        <h3>About Me</h3>
+        <p>🚀 I am an energetic, detail-oriented Technical Support Specialist with a passion for technology and problem-solving. Skilled in diagnosing and resolving software/hardware issues across platforms (Windows, Mac, Android, iOS), with strong proficiency in ticketing systems (Jira, Salesforce), remote troubleshooting, and workflow optimization.</p>
+      </div>
+      <div class="follow">
+        <h3>Follow Me</h3>
+        <div class="box">
+          <a href="https://www.linkedin.com/in/razvanjega/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/razvanjega" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://maps.app.goo.gl/PZ128PnBswhLS4MD8" target="Cluj-Napoca" title="Cluj-Napoca"><i class="fas fa-map-marker"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="func">
+      <div class="work">
+        <h3><i class="fa fa-briefcase"></i>Experience</h3>
+        <ul>
+          <li><span>Technical Customer Support</span><small>Majorel | Feb 2024 - Present</small><small>Cluj-Napoca</small><br><small>• Reduced downtime by 30% through diagnosing and resolving complex software/hardware issues across Mac, Windows, Android, and iOS.</small></li>
+          <li><span>Junior QA Manual Engineer Internship</span><small>GOIT | Jun 2023 - Oct 2023</small><small>Remote</small><br><small>• Led usability and regression testing for a web application, reducing bug resolution time and improving product stability.</small></li>
+        </ul>
+      </div>
+      <div class="edu">
+        <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+        <ul>
+          <li><span>Master’s Degree in International Business Administration (IBA)</span><small>Babes-Bolyai University | 2018 – 2020</small></li>
+          <li><span>Bachelor’s Degree in Computer Science</span><small>Babes-Bolyai University | 2015 – 2018</small></li>
+        </ul>
+      </div>
+      <div class="skills-prog">
+        <h3><i class="fas fa-code"></i>Technical Skills</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript, SQL</li>
+        </ul>
+        <h3><i class="fas fa-users"></i>Soft Skills</h3>
+        <ul>
+          <li>People Management</li>
+          <li>Communication & Problem-Solving</li>
+        </ul>
+      </div>
+      <div class="Certifications">
+        <h3><i class="fas fa-star"></i>Certifications</h3>
+        <div class="Certifications-items">
+          <div class="art"><i class="fas fa-graduation-cap"></i><span><a href="https://coursera.org/share/72a69d68b3ed9ffaf92f32b51010dc21" target="_blank">Google IT Support Professional - Coursera</a></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
