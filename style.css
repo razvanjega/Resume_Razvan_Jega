@@ -1,116 +1,44 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-
-* {
-  outline: none;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  transition: 0.5s;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  background: #ffffff;
-  font-size: 16px;
-  color: #000;
-  line-height: 1.6;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  background: #0072b1;
-  color: #fff;
-}
-
-nav ul {
+/* Stilizare pentru poza de profil */
+.profile {
   display: flex;
-  justify-content: center;
-  background: #f3f3f3;
-  padding: 10px;
+  align-items: center;
+  padding-top: 20px;
+  position: relative;
 }
 
-nav ul li {
-  list-style: none;
-  margin: 0 15px;
+.photo img {
+  width: 120px;  /* Dimensiunea imaginii */
+  height: 120px; /* Dimensiunea imaginii */
+  border-radius: 50%; /* Face imaginea rotundă */
+  position: absolute; /* Poziționarea imaginii în stânga sus */
+  top: 0;
+  left: 0;
+  border: 3px solid #fff; /* Border alb pentru a scoate imaginea în evidență */
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
+.info {
+  margin-left: 140px; /* Lăsăm spațiu pentru imaginea de profil */
 }
 
-nav ul li a:hover {
-  color: #0072b1;
+.name, .job {
+  margin: 5px 0;
 }
 
-.resume {
-  width: 90%;
-  max-width: 960px;
-  margin: 20px auto;
-  display: flex;
-  flex-wrap: wrap;
-  background: #ffffff;
-  box-shadow: 10px 10px #f3f3f3;
-}
-
-.resume .base {
-  width: 100%;
-  background: #fefefe;
-  padding: 20px;
-  text-align: center;
-}
-
-.resume .base img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.resume .func {
-  width: 100%;
-  padding: 20px;
-}
-
-h2, h3 {
-  color: #0072b1;
-  margin-bottom: 10px;
-}
-
-section {
-  margin-bottom: 20px;
-  padding: 15px;
-  background: #f9f9f9;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 5px;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #0072b1;
-  color: white;
-  margin-top: 20px;
-}
-
-@media (min-width: 768px) {
-  .resume {
-    flex-direction: row;
+/* Responsivitate */
+@media (max-width: 768px) {
+  .profile {
+    text-align: center;
+    position: relative;
   }
 
-  .resume .base {
-    width: 30%;
+  .photo img {
+    width: 100px;
+    height: 100px;
+    position: static;
+    margin: 0 auto;
   }
 
-  .resume .func {
-    width: 70%;
+  .info {
+    margin-left: 0;
   }
 }
