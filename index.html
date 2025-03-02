@@ -3,48 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Razvan Jega - CV</title>
+  <title>Razvan Jega - Resume</title>
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"> <!-- Legătura către fișierul CSS extern -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome pentru iconițe -->
 </head>
 <body>
-  <div class="resume-wrapper">
-    <div class="container">
+  <div class="wrapper">
+    <div class="intro">
       <div class="profile">
-        <div class="name-wrapper">
-          <h1>Razvan Jega</h1>
-          <h2>Technical Support Specialist</h2>
+        <div class="photo">
+          <img src="https://via.placeholder.com/150" alt="Profile Picture">
         </div>
-        <div class="picture-resume-wrapper">
-          <div class="picture-resume">
-            <img src="https://via.placeholder.com/130" alt="Profile Picture">
-          </div>
-        </div>
-        <div class="contact-info">
-          <ul>
-            <li><span class="bold">Email:</span> razvan.jega@gmail.com</li>
-            <li><span class="bold">Phone:</span> +40746074595</li>
-            <li><span class="bold">LinkedIn:</span> <a href="https://www.linkedin.com/in/razvanjega/" target="_blank">Link</a></li>
-            <li><span class="bold">GitHub:</span> <a href="https://github.com/razvanjega" target="_blank">Link</a></li>
-          </ul>
-        </div>
-        <div class="contact-presentation">
-          <p>Energetic and detail-oriented Technical Support Specialist with a passion for technology and problem-solving. Experienced in diagnosing and resolving software and hardware issues across Windows, Mac, Android, and iOS. Skilled in ticketing systems (Jira, Salesforce), remote troubleshooting, security compliance, and workflow optimization. Adept at incident management, technical escalations, and system diagnostics to improve service efficiency. Proactive and growth-oriented, with a results-driven mindset.</p>
+        <div class="bio">
+          <h1 class="name">Razvan Jega</h1>
+          <p class="profession">Technical Support Specialist</p>
         </div>
       </div>
-      <div class="experience">
-        <div class="section-padding">
-          <h3 class="experience-title">Work Experience</h3>
-          <div class="company-wrapper">
-            <h4>Majorel | Remote</h4>
-            <p>Feb 2024 - Present</p>
+      <div class="intro-section about">
+        <h1 class="title">About Me</h1>
+        <p class="paragraph">
+          Energetic and detail-oriented Technical Support Specialist with a passion for technology and problem-solving. Experienced in diagnosing and resolving software and hardware issues across Windows, Mac, Android, and iOS. Skilled in ticketing systems (Jira, Salesforce), remote troubleshooting, security compliance, and workflow optimization.
+        </p>
+      </div>
+      <div class="intro-section contact">
+        <h1 class="title">Contact</h1>
+            <div class="info-section">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Cluj-Napoca, Romania</span>
+        </div>
+          <div class="info-section link">
+          <i class="fab fa-linkedin"></i>
+          <a target="_blank" rel="author" href="https://www.linkedin.com/in/razvanjega/">
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+        <div class="info-section link">
+          <i class="fab fa-github"></i>
+          <a target="_blank" rel="author" href="https://github.com/razvanjega">
+            <span>GitHub Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="detail">
+      <div class="detail-section edu">
+        <div class="detail-title">
+          <div class="title-icon">
+            <i class="fas fa-user-graduate"></i>
           </div>
-          <div class="job-wrapper">
-            <h4>Technical Customer Support</h4>
-            <p>Reduced downtime by 30% through diagnosing and resolving complex software and hardware issues across Mac, Windows, Android, and iOS. Managed 400+ monthly customer interactions via phone, email, and chat, achieving an 80%+ satisfaction rate. Streamlined workflows, reducing response times by 25% and analyzing feedback to drive service improvements.</p>
+          <span>Education</span>
+        </div>
+        <div class="detail-content">
+          <div class="timeline-block">
+            <h1>Master’s Degree in International Business Administration (IBA)</h1>
+            <p>Babes-Bolyai University, Cluj-Napoca</p>
+            <time>2018 – 2020</time>
           </div>
-          <!-- Adaugă mai multe experiențe aici -->
+          <div class="timeline-block">
+            <h1>High School Diploma in Mathematics and Computer Science</h1>
+            <p>National College “Calistrat Hogas”, Piatra Neamt</p>
+            <time>2011 – 2015</time>
+          </div>
+        </div>
+      </div>
+      <div class="detail-section pg-skill">
+        <div class="detail-title">
+          <div class="title-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <span>Technical Skills</span>
+        </div>
+        <div class="detail-content">
+          <ul class="pg-list">
+            <li>
+              <span>HTML</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 90%"></div>
+              </div>
+            </li>
+            <li>
+              <span>CSS</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 85%"></div>
+              </div>
+            </li>
+            <li>
+              <span>JavaScript</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 75%"></div>
+              </div>
+            </li>
+            <li>
+              <span>SQL</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 70%"></div>
+              </div>
+            </li>
+            <li>
+              <span>Git & GitHub</span>
+              <div class="sb-skeleton">
+                <div class="skillbar" style="--pgbar-length: 80%"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="detail-section tool-skill">
+        <div class="detail-title">
+          <div class="title-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <span>Tools</span>
+        </div>
+        <div class="detail-content">
+          <ul class="tool-list">
+            <li>
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.9"></circle>
+              </svg>
+              <span class="tl-name">Jira</span>
+              <span class="tl-exp">90%</span>
+            </li>
+            <li>
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.8"></circle>
+              </svg>
+              <span class="tl-name">Postman</span>
+              <span class="tl-exp">80%</span>
+            </li>
+            <li>
+              <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.7"></circle>
+              </svg>
+              <span class="tl-name">Salesforce</span>
+              <span class="tl-exp">70%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="detail-section interests">
+        <div class="detail-title">
+          <div class="title-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <span>Certifications</span>
+        </div>
+        <div class="detail-content">
+          <ul class="favor-list">
+            <li>
+                <i class="fas fa-certificate"></i>
+                <span>Google IT Support Professional - Coursera | <a href="https://coursera.org/share/72a69d68b3ed9ffaf92f32b51010dc21">CERTIFICATE</span>
+                <p>Completed a comprehensive program in technical support, system administration, networking, and operating systems, gaining hands-on experience in troubleshooting, IT infrastructure management, and customer service, with proficiency in Windows, Linux, and cloud-based tools.</p>
+            </li>
+            <li>
+                <i class="fas fa-certificate"></i>
+                <span>QA Manual Tester Certificate - GoIT | <a href="https://drive.google.com/file/d/1jlvE2AraYTruZEarFC_i97olo1mrYutm/view">CERTIFICATE</a></span>
+                <p>Led end-to-end testing for a multi-platform money management application, utilizing tools like TestRail, Jira, Excel, and Postman API to create test cases, bug reports, and checklists, while managing a team of 6 professionals to ensure timely delivery and product stability, and leveraging technologies such as HTML, CSS, JSON, SQL, Git, and Trello for project coordination.</p>
+            </li>
+            <li>
+                <i class="fas fa-certificate"></i>
+                <span>Programmer Analyst - FastTrackIT | CERTIFICATE</span>
+                <p>Designed and developed responsive websites from concept to deployment, utilizing HTML, CSS, JavaScript, SQL, Git, and GitHub.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
