@@ -2,8 +2,7 @@ var select = function(s) {
   return document.querySelector(s);
 }
 
-function randomBetween(min,max)
-{
+function randomBetween(min,max) {
     var number = Math.floor(Math.random()*(max-min+1)+min);
   
     if ( number !== 0 ){
