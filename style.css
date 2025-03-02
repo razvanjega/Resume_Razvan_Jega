@@ -1,516 +1,116 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+
 * {
   outline: none;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-html,
-body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   transition: 0.5s;
-  background: #ffffff;
-  cursor: default;
+}
+
+body {
   font-family: "Montserrat", sans-serif;
+  background: #ffffff;
   font-size: 16px;
+  color: #000;
+  line-height: 1.6;
 }
 
-a {
+header {
+  text-align: center;
+  padding: 20px;
+  background: #0072b1;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  background: #f3f3f3;
+  padding: 10px;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav ul li a {
   text-decoration: none;
-  color: #000000;
-  display: block;
-  transition-duration: 0.3s;
+  color: #000;
+  font-weight: bold;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-h3 {
+nav ul li a:hover {
   color: #0072b1;
-  margin: 10px 0;
-  text-transform: capitalize;
-  font-size: 1.25em;
 }
 
 .resume {
-  width: 960px;
-  background: #ffffff;
-  color: #000000;
+  width: 90%;
+  max-width: 960px;
   margin: 20px auto;
-  box-shadow: 10px 10px #f3f3f3;
-  position: relative;
   display: flex;
-}
-
-.resume .base,
-.resume .func {
-  box-sizing: border-box;
-  float: left;
-}
-
-.resume .base > div,
-.resume .func > div {
-  padding-bottom: 10px;
-}
-
-.resume .base > div:last-of-type,
-.resume .func > div:last-of-type {
-  padding-bottom: 0;
+  flex-wrap: wrap;
+  background: #ffffff;
+  box-shadow: 10px 10px #f3f3f3;
 }
 
 .resume .base {
-  width: 30%;
-  padding: 30px 15px;
+  width: 100%;
   background: #fefefe;
-  color: #000000;
+  padding: 20px;
+  text-align: center;
 }
 
-.resume .base .profile {
-  background: #ffffff;
-  padding: 30px 15px 40px 15px;
-  margin: -30px -15px 45px -15px;
-  position: relative;
-  z-index: 2;
-}
-
-.resume .base .profile::after {
-  content: "";
-  position: absolute;
-  background: #0072b1;
-  width: 100%;
-  height: 30px;
-  bottom: -15px;
-  left: 0;
-  transform: skewY(-5deg);
-  z-index: -1;
-}
-
-.resume .base .profile .photo img {
-  width: 100%;
+.resume .base img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-}
-
-.resume .base .profile .photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.resume .base .profile .fa-rocket {
-  font-size: 100px;
-  text-align: center;
-  margin: auto;
-  color: #000000;
-}
-
-.resume .base .profile .info {
-  text-align: center;
-  color: #000000;
-}
-
-.resume .base .profile .info .name {
-  margin-top: 10px;
-  margin-bottom: 0;
-  font-size: 1.75em;
-  text-transform: capitalize;
-  color: #000000;
-}
-
-.resume .base .profile .info .job {
-  margin-top: 10px;
-  margin-bottom: 0;
-  font-size: 1.5em;
-  text-transform: capitalize;
-  color: #000000;
-}
-
-.resume .base .contact div {
-  line-height: 24px;
-}
-
-.resume .base .contact div a:hover {
-  color: #000000;
-}
-
-.resume .base .contact div a:hover span::after {
-  width: 100%;
-}
-
-.resume .base .contact div:hover i {
-  color: #000000;
-}
-
-.resume .base .contact div i {
-  color: #000000;
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
-  text-align: center;
-  margin-right: 15px;
-  transition-duration: 0.3s;
-}
-
-.resume .base .contact div span {
-  position: relative;
-}
-
-.resume .base .contact div span::after {
-  content: "";
-  position: absolute;
-  background: #000000;
-  height: 1px;
-  width: 0;
-  bottom: 0;
-  left: 0;
-  transition-duration: 0.3s;
-}
-
-.resume .base .follow .box {
-  text-align: center;
-  vertical-align: middle;
-}
-
-.resume .base .follow .box a {
-  display: inline-block;
-  vertical-align: text-bottom;
-}
-
-.resume .base .follow .box a:hover i {
-  background: #000000;
-  border-radius: 5px;
-  transform: rotate(45deg) scale(0.8);
-}
-
-.resume .base .follow .box a:hover i::before {
-  transform: rotate(-45deg) scale(1.5);
-}
-
-.resume .base .follow .box i {
-  display: inline-block;
-  font-size: 30px;
-  background: #0072b1;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  line-height: 60px;
-  color: #fefefe;
-  margin: 0 10px 10px 10px;
-  transition-duration: 0.3s;
-}
-
-.resume .base .follow .box i::before {
-  transition-duration: 0.3s;
-}
-
-.resume .base .follow .box i.fa::before {
-  display: block;
+  margin-bottom: 10px;
 }
 
 .resume .func {
   width: 100%;
-  padding: 30px;
-}
-
-.resume .func:hover > div {
-  transition-duration: 0.5s;
-}
-
-.resume .func:hover > div:hover h3 i {
-  transform: scale(1.25);
-}
-
-.resume .func:hover > div:not(:hover) {
-  opacity: 0.5;
-}
-
-.resume .func h3 {
-  transition-duration: 0.3s;
-  margin-top: 0;
-}
-
-.resume .func h3 i {
-  color: #fefefe;
-  background: #0072b1;
-  width: 42px;
-  height: 42px;
-  font-size: 20px;
-  line-height: 42px;
-  border-radius: 50%;
-  text-align: center;
-  vertical-align: middle;
-  margin-right: 8px;
-  transition-duration: 0.3s;
-}
-
-.resume .func .work,
-.resume .func .edu {
-  float: left;
-}
-
-.resume .func .work small,
-.resume .func .edu small {
-  display: block;
-  opacity: 0.7;
-}
-
-.resume .func .work ul li,
-.resume .func .edu ul li {
-  position: relative;
-  margin-left: 15px;
-  padding-left: 25px;
-  padding-bottom: 15px;
-}
-
-.resume .func .work ul li:hover::before,
-.resume .func .edu ul li:hover::before {
-  -webkit-animation: circle 1.2s infinite;
-          animation: circle 1.2s infinite;
-}
-
-.resume .func .work ul li:hover span,
-.resume .func .edu ul li:hover span {
-  color: #0072b1;
-}
-
-@-webkit-keyframes circle {
-  from {
-    box-shadow: 0 0 0 0px #0072b1;
-  }
-  to {
-    box-shadow: 0 0 0 6px #a9a9a9);
-  }
-}
-
-@keyframes circle {
-  from {
-    box-shadow: 0 0 0 0px #a9a9a9;
-  }
-  to {
-    box-shadow: 0 0 0 6px #a9a9a9;
-  }
-}
-.resume .func .work ul li:first-of-type::before,
-.resume .func .edu ul li:first-of-type::before {
-  width: 10px;
-  height: 10px;
-  left: 1px;
-}
-
-.resume .func .work ul li:last-of-type,
-.resume .func .edu ul li:last-of-type {
-  padding-bottom: 3px;
-}
-
-.resume .func .work ul li:last-of-type::after,
-.resume .func .edu ul li:last-of-type::after {
-  border-radius: 1.5px;
-}
-
-.resume .func .work ul li::before,
-.resume .func .work ul li::after,
-.resume .func .edu ul li::before,
-.resume .func .edu ul li::after {
-  content: "";
-  display: block;
-  position: absolute;
-}
-
-.resume .func .work ul li::before,
-.resume .func .edu ul li::before {
-  width: 7px;
-  height: 7px;
-  border: 3px solid #ffffff;
-  background: #a9a9a9;
-  border-radius: 50%;
-  left: 3px;
-  z-index: 1;
-}
-
-.resume .func .work ul li::after,
-.resume .func .edu ul li::after {
-  width: 3px;
-  height: 100%;
-  background: #ffffff;
-  left: 5px;
-  top: 0;
-}
-
-.resume .func .work ul li span,
-.resume .func .edu ul li span {
-  transition-duration: 0.3s;
-}
-
-.resume .func .work {
-  width: 48%;
-  background: #fefefe;
-  padding: 15px;
-  margin: 0 4% 15px 0;
-}
-
-.resume .func .edu {
-  width: 48%;
-  background: #fefefe;
-  padding: 15px;
-}
-
-.resume .func .skills-prog {
-  clear: both;
-
-  background: #fefefe;
   padding: 20px;
 }
 
-.resume .func .skills-prog ul {
-  margin-left: 15px;
-  
-}
-
-.resume .func .skills-prog ul li {
-  margin-bottom: 8px;
-  display: left;
-  align-items: center;
-  transition-duration: 0.3s;
-}
-
-.resume .func .skills-prog ul li:hover {
+h2, h3 {
   color: #0072b1;
+  margin-bottom: 10px;
 }
 
-.resume .func .skills-prog ul li:hover .skills-bar .bar {
-  background: #0072b1;
-  box-shadow: 0 0 0 1px #0072b1;
-}
-
-.resume .func .skills-prog ul li span {
-  display: block;
-  width: 250px;
-}
-
-.resume .func .skills-prog ul li .skills-bar {
-  background: #ffffff;
-  height: 2px;
-  width: calc(100% - 120px);
-  position: relative;
-  border-radius: 2px;
-}
-
-.resume .func .skills-prog ul li .skills-bar .bar {
-  position: absolute;
-  top: -1px;
-  height: 4px;
-  background: #0072b1;
-  box-shadow: 0 0 0 #0072b1;
-  border-radius: 5px;
-}
-
-.resume .func .skills-soft {
-  clear: both;
-  background: #fefefe;
+section {
+  margin-bottom: 20px;
   padding: 15px;
-  margin: 15px 0 0;
+  background: #f9f9f9;
 }
 
-.resume .func .skills-soft ul {
-  display: flex;
-  justify-content: space-between;
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+footer {
   text-align: center;
+  padding: 10px;
+  background: #0072b1;
+  color: white;
+  margin-top: 20px;
 }
 
-.resume .func .skills-soft ul li {
-  position: relative;
-}
+@media (min-width: 768px) {
+  .resume {
+    flex-direction: row;
+  }
 
-.resume .func .skills-soft ul li:hover svg .cbar {
-  stroke: #0072b1;
-  stroke-width: 4px;
-}
+  .resume .base {
+    width: 30%;
+  }
 
-.resume .func .skills-soft ul li:hover span,
-.resume .func .skills-soft ul li:hover small {
-  transform: scale(1.2);
-}
-
-.resume .func .skills-soft ul li svg {
-  width: 95%;
-  fill: transparent;
-  transform: rotate(-90deg);
-}
-
-.resume .func .skills-soft ul li svg circle {
-  stroke-width: 1px;
-  stroke: #ffffff;
-}
-
-.resume .func .skills-soft ul li svg .cbar {
-  stroke-width: 3px;
-  stroke: #0072b1;
-  stroke-linecap: round;
-}
-
-.resume .func .skills-soft ul li span,
-.resume .func .skills-soft ul li small {
-  position: absolute;
-  display: block;
-  width: 100%;
-  top: 52%;
-  transition-duration: 0.3s;
-}
-
-.resume .func .skills-soft ul li span {
-  top: 40%;
-}
-
-.resume .func .Certifications {
-  background: #fefefe;
-  margin: 15px 0 0;
-  padding: 15px;
-}
-
-.resume .func .Certifications-items {
-  box-sizing: border-box;
-  padding: 0 0 15px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.resume .func .Certifications-items div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.resume .func .Certifications-items div:hover i {
-  transform: scale(1.2);
-}
-
-.resume .func .Certifications-items div:hover span {
-  color: #0072b1;
-  transition-duration: 0.3s;
-}
-
-.resume .func .Certifications-items div i {
-  font-size: 45px;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  color: #000000;
-  transition-duration: 0.3s;
-}
-
-.resume .func .Certifications-items div span {
-  display: block;
+  .resume .func {
+    width: 70%;
+  }
 }
