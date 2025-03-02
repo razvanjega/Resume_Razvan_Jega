@@ -1,34 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <meta charset="UTF-8">
   <title>My Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+      .resume {
+        padding: 10px;
+      }
+      .base, .func {
+        display: block;
+        text-align: center;
+      }
+      .info h1, .info h2 {
+        font-size: 1.5em;
+      }
+      .work, .edu, .skills-prog, .Certifications {
+        margin: 0;
+      }
+      .work ul, .edu ul, .skills-prog ul, .Certifications-items {
+        padding-left: 0;
+        list-style: none;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Resume Content -->
-  <div class="resume">
-    <div class="base">
-      <div class="profile">
-        <div class="photo">
-          <!-- Asigură-te că calea fișierului este corectă! -->
+<!-- partial:index.partial.html -->
+<div class="resume">
+  <div class="base">
+    <div class="profile">
+      <div class="photo">
+        <!-- Aici am corectat, adăugând imaginea de profil -->
+        <i class="profile Picture">
           <img src="src/ProfilePicture.png" alt="Razvan Jega">
-        </div>
-        <div class="info">
-          <h1 class="name">Razvan Jega</h1>
-          <h2 class="job">Technical Support Specialist</h2>
-          <p>Cluj-Napoca, Cluj, Romania</p>
-          <p><a href="https://www.linkedin.com/in/razvanjega/" target="_blank">LinkedIn</a> | <a href="https://github.com/razvanjega" target="_blank">GitHub</a></p>
-        </div>
+        </i>
       </div>
-      <!-- Other sections like About, Experience, Education, etc. -->
+      <div class="info">
+        <h1 class="name">Razvan Jega</h1>
+        <h2 class="job">Technical Support Specialist</h2>
+        <p>Cluj-Napoca, Cluj, Romania</p>
+        <p>Email: <a href="mailto:razvan.jega@gmail.com">razvan.jega@gmail.com</a> | Phone: <a href="tel:+40746074595">+40 746 074 595</a></p>
+        <p><a href="https://www.linkedin.com/in/razvanjega/" target="_blank">LinkedIn</a> | <a href="https://github.com/razvanjega" target="_blank">GitHub</a></p>
+      </div>
+    </div>
+    <div class="about">
+      <h3>About Me</h3>
+      <p>🚀 I am an energetic, detail-oriented Technical Support Specialist with a passion for technology and problem-solving. Skilled in diagnosing and resolving software/hardware issues across platforms (Windows, Mac, Android, iOS), with strong proficiency in ticketing systems (Jira, Salesforce), remote troubleshooting, and workflow optimization.</p>
+    </div>
+    <div class="follow">
+      <h3>Follow Me</h3>
+      <div class="box">
+        <a href="https://www.linkedin.com/in/razvanjega/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/razvanjega" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://maps.app.goo.gl/PZ128PnBswhLS4MD8" target="Cluj-Napoca" title="Cluj-Napoca"><i class="fas fa-map-marker"></i></a>
+      </div>
     </div>
   </div>
+  <div class="func">
+    <div class="work">
+      <h3><i class="fa fa-briefcase"></i>Experience</h3>
+      <ul>
+        <li><span>Technical Customer Support</span><small>Majorel | Feb 2024 - Present</small><small>Cluj-Napoca</small><br><small>• Reduced downtime by 30% through diagnosing and resolving complex software/hardware issues across Mac, Windows, Android, and iOS.</small><small>• Managed 400+ monthly customer interactions with an 80%+ satisfaction rate.</small><small>• Streamlined workflows, reducing response times by 25% and analyzing feedback to drive service improvements.</small></li>
+        <li><span>Junior QA Manual Engineer Internship</span><small>GOIT | Jun 2023 - Oct 2023</small><small>Remote</small><br><small>• Led a team to conduct usability and regression testing for a web application, reducing bug resolution time and improving product stability.</small><small>• Streamlined workflows to improve testing efficiency and ensure timely delivery by 30%.</small></li>
+        <li><span>Non-refundable European Funds Consultant</span><small>KNM Romania | Apr 2023 - Sep 2023</small><small>Cluj-Napoca</small><br><small>• Delivered consultancy via email and calls, guiding clients to effective solutions and ensuring high satisfaction.</small></li>
+        <li><span>Chief Executive Officer</span><small>Ineedhelp | Aug 2016 - Jan 2023</small><small>Piatra-Neamt</small><br><small>• Efficiently managed resources, promoted the company, and expanded the client portfolio by securing three new clients.</small></li>
+        <li><span>Content Creator and Editor Specialist</span><small>Ventum Solutions | Nov 2017 - Apr 2021</small><small>Cluj-Napoca</small><br><small>• Led SEO implementation and ERP systems, driving a 30% increase in website visibility and sales.</small><small>• Managed high-quality content creation for corporate websites, social media, and B2B platforms.</small></li>
+        <li><span>Java Developer Internship</span><small>FastTrackIT | Feb 2019 - Jul 2019</small><small>Cluj-Napoca</small><br><small>• Developed websites using HTML, CSS, JavaScript, SQL, and Git, contributing to the "Final Project" for FastTrackIT.</small></li>
+      </ul>
+    </div>
+    <div class="edu">
+      <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+      <ul>
+        <li><span>Master’s Degree in International Business Administration (IBA)</span><small>Babes-Bolyai University | 2018 – 2020</small></li>
+        <li><span>Bachelor’s Degree in Computer Science</span><small>Babes-Bolyai University | 2015 – 2018</small></li>
+        <li><span>High School Diploma in Mathematics and Computer Science</span><small>National College “Calistrat Hogas” | 2011 – 2015</small></li>
+      </ul>
+    </div>
+    <div class="skills-prog">
+      <h3><i class="fas fa-code"></i>Technical Skills</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript, SQL</li>
+        <li>Postman API, Jira, TestRail, Trello, Slack</li>
+        <li>Git, GitHub, Sourcetree</li>
+        <li>ERP, Salesforce, Microsoft Office</li>
+        <li>Technical and Customer Support</li>
+      </ul>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+      <h3><i class="fas fa-users"></i>Soft Skills</h3>
+      <ul>
+        <li>People Management</li>
+        <li>Communication & Problem-Solving</li>
+        <li>Time Management</li>
+        <li>Attention to Detail</li>
+      </ul>
+    </div>
+    
+    <div class="Certifications">
+      <h3><i class="fas fa-star"></i>Certifications</h3>
+      <div class="Certifications-items">
+        <div class="art"><i class="fas fa-graduation-cap"></i><span><a href="https://drive.google.com/file/d/1jlvE2AraYTruZEarFC_i97olo1mrYutm/view" target="_blank">QA Manual Tester Certificate - GOIT</a></span></div>
+        <div class="art"><i class="fas fa-graduation-cap"></i><span>Programmer Analyst - FastTrackIT</span></div>
+        <div class="art"><i class="fas fa-graduation-cap"></i><span>Google IT Support Professional - Coursera</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script><script  src="./script.js"></script>
 </body>
 </html>
