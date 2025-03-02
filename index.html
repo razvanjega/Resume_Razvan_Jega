@@ -6,6 +6,7 @@
   <title>Razvan Jega - CV</title>
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Legătura către fișierul CSS extern -->
 </head>
 <body>
   <div class="resume-wrapper">
@@ -22,8 +23,6 @@
         </div>
         <div class="contact-info">
           <ul>
-            <li><span class="bold">Email:</span> razvan.jega@gmail.com</li>
-            <li><span class="bold">Phone:</span> +40746074595</li>
             <li><span class="bold">LinkedIn:</span> <a href="https://www.linkedin.com/in/razvanjega/" target="_blank">Link</a></li>
             <li><span class="bold">GitHub:</span> <a href="https://github.com/razvanjega" target="_blank">Link</a></li>
           </ul>
@@ -48,39 +47,6 @@
       </div>
     </div>
   </div>
-  <script>
-    // JavaScript-ul tău aici
-    var select = function(s) {
-      return document.querySelector(s);
-    }
-
-    function randomBetween(min,max) {
-        var number = Math.floor(Math.random()*(max-min+1)+min);
-      
-        if ( number !== 0 ){
-          return number;
-        }else {
-          return 0.5;
-        }
-    }
-
-    var tl = new TimelineMax();
-
-    for(var i = 0; i < 20; i++){
-
-      var t = TweenMax.to(select('.bubble' + i), randomBetween(1, 1.5), {
-        x: randomBetween(12, 15) * (randomBetween(-1, 1)),
-        y: randomBetween(12, 15) * (randomBetween(-1, 1)), 
-        repeat:-1,
-        repeatDelay:randomBetween(0.2, 0.5),
-        yoyo:true,
-        ease:Elastic.easeOut.config(1, 0.5)
-      })
-
-      tl.add(t, (i+1)/0.6)
-    }
-
-    tl.seek(50);
-  </script>
+  <script src="script.js"></script> <!-- Legătura către fișierul JavaScript extern -->
 </body>
 </html>
