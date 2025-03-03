@@ -158,18 +158,6 @@
             <p>Technical Support Specialist</p>
             <p>Cluj-Napoca, Cluj, Romania</p>
 
-             <!-- Formular pentru email -->
-        <form id="emailForm">
-            <input type="email" id="emailInput" placeholder="alex@gmail.com" required>
-            <button type="submit">Let's connect!</button>
-        </form>
-
-        <!-- Friend count -->
-        <div class="friend-counter">
-            <strong>Friends:</strong> <span id="friendCount">0</span>
-        </div>
-    </div>
-
 </header>      
 
         <!-- Contact Info -->
@@ -268,33 +256,48 @@
     </div>
 
 
-     <script>
-         let friends = [];
+    
+        <form id="emailForm">
+            <input type="email" id="emailInput" placeholder="Introdu adresa ta de email" required>
+            <button type="submit">Let's connect!</button>
+        </form>
 
-        // Count friends
+        <!-- Friends count -->
+        <div class="friend-counter">
+            <strong>Friends:</strong> <span id="friendCount">0</span>
+        </div>
+    </div>
+
+    <script>
+        
+        let friends = [];
+
+        
         function updateFriendCount() {
             const friendCountElement = document.getElementById('friendCount');
             friendCountElement.textContent = friends.length;
         }
 
-               const emailForm = document.getElementById('emailForm');
-        emailForm.addEventListener('Submit', function (event) {
+  
+        const emailForm = document.getElementById('emailForm');
+        emailForm.addEventListener('submit', function (event) {
             event.preventDefault(); 
 
             const emailInput = document.getElementById('emailInput');
             const email = emailInput.value.trim();
 
-            if (email && !friends.includes(email)) {
+            if (email && !friends.includes(email)) { 
                 friends.push(email); 
                 updateFriendCount(); 
                 emailInput.value = ''; 
-                alert('Thanks for connecting!'); 
+                alert('Thanks for connecting!');
             } else {
-                alert('The email address was already registered');
+                alert('The email address is already registered.');
             }
         });
 
-               updateFriendCount();
+        
+        updateFriendCount();
     </script>
 
 </body>
