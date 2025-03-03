@@ -160,53 +160,23 @@
 
              <!-- Formular pentru email -->
         <form id="emailForm">
-            <input type="email" id="emailInput" placeholder="Introdu adresa ta de email" required>
-            <button type="submit">Devino prieten!</button>
+            <input type="email" id="emailInput" placeholder="alex@gmail.com" required>
+            <button type="submit">Let's connect!</button>
         </form>
 
-        <!-- Contor de prieteni -->
+        <!-- Friend count -->
         <div class="friend-counter">
-            <strong>Prieteni:</strong> <span id="friendCount">0</span>
+            <strong>Friends:</strong> <span id="friendCount">0</span>
         </div>
     </div>
 
-    <script>
-         let friends = [];
-
-        // Count friends
-        function updateFriendCount() {
-            const friendCountElement = document.getElementById('friendCount');
-            friendCountElement.textContent = friends.length;
-        }
-
-               const emailForm = document.getElementById('emailForm');
-        emailForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Previne reîncărcarea paginii
-
-            const emailInput = document.getElementById('emailInput');
-            const email = emailInput.value.trim();
-
-            if (email && !friends.includes(email)) {
-                friends.push(email); 
-                updateFriendCount(); 
-                emailInput.value = ''; 
-                alert('Thanks for connecting!'); 
-            } else {
-                alert('The email address was already registered');
-            }
-        });
-
-        // Inițializăm contorul la încărcarea paginii
-        updateFriendCount();
-    </script>
-
-        
+</header>      
 
         <!-- Contact Info -->
         <div class="contact-info">
             <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/razvanjega/">Link</a> | <strong>GitHub:</strong> <a href="https://github.com/razvanjega">Link</a></p>
         </div>
-</header>
+
         <!-- Professional Summary -->
         <section>
             <h2>Professional Summary</h2>
@@ -296,6 +266,36 @@
             </ul>
         </section>
     </div>
+
+
+     <script>
+         let friends = [];
+
+        // Count friends
+        function updateFriendCount() {
+            const friendCountElement = document.getElementById('friendCount');
+            friendCountElement.textContent = friends.length;
+        }
+
+               const emailForm = document.getElementById('emailForm');
+        emailForm.addEventListener('Submit', function (event) {
+            event.preventDefault(); 
+
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value.trim();
+
+            if (email && !friends.includes(email)) {
+                friends.push(email); 
+                updateFriendCount(); 
+                emailInput.value = ''; 
+                alert('Thanks for connecting!'); 
+            } else {
+                alert('The email address was already registered');
+            }
+        });
+
+               updateFriendCount();
+    </script>
 
 </body>
 </html>
