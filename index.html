@@ -258,7 +258,7 @@
 
     
         <form id="emailForm">
-            <input type="email" id="emailInput" placeholder="Introdu adresa ta de email" required>
+            <input type="email" id="emailInput" placeholder="John@gmail.com" required>
             <button type="submit">Let's connect!</button>
         </form>
 
@@ -268,37 +268,95 @@
         </div>
     </div>
 
-    <script>
-        
-        let friends = [];
+    <div class="center-container">
+    <form id="emailForm">
+        <input type="email" id="emailInput" placeholder="Introduceți adresa de email" required>
+        <button type="submit">Let's connect!</button>
+    </form>
 
-        
-        function updateFriendCount() {
-            const friendCountElement = document.getElementById('friendCount');
-            friendCountElement.textContent = friends.length;
+    <div class="friend-counter">
+        <strong>Friends:</strong> <span id="friendCount">0</span>
+    </div>
+</div>
+
+<style>
+    .center-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; 
+        text-align: center;
+    }
+
+    .friend-counter {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; 
+    }
+
+    input[type="email"] {
+        padding: 10px;
+        width: 250px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #0a66c2;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #004182;
+    }
+</style>
+
+<script>
+    let friends = [];
+
+    function updateFriendCount() {
+        const friendCountElement = document.getElementById('friendCount');
+        friendCountElement.textContent = friends.length;
+    }
+
+    const emailForm = document.getElementById('emailForm');
+    emailForm.addEventListener('submit', function (event) {
+        event.preventDefault(); 
+
+        const emailInput = document.getElementById('emailInput');
+        const email = emailInput.value.trim();
+
+        if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            alert('Please insert a valid email!');
+            return;
         }
 
-  
-        const emailForm = document.getElementById('emailForm');
-        emailForm.addEventListener('submit', function (event) {
-            event.preventDefault(); 
+        if (email && !friends.includes(email)) { 
+            friends.push(email); 
+            updateFriendCount(); 
+            emailInput.value = ''; 
+            alert('Thanks for connecting!');
+        } else {
+            alert('The email address is already registered.');
+        }
+    });
 
-            const emailInput = document.getElementById('emailInput');
-            const email = emailInput.value.trim();
+    updateFriendCount();
+</script>
 
-            if (email && !friends.includes(email)) { 
-                friends.push(email); 
-                updateFriendCount(); 
-                emailInput.value = ''; 
-                alert('Thanks for connecting!');
-            } else {
-                alert('The email address is already registered.');
-            }
-        });
-
-        
-        updateFriendCount();
-    </script>
 
 </body>
 </html>
