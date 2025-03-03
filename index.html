@@ -157,6 +157,49 @@
             <h1>Răzvan Jega</h1>
             <p>Technical Support Specialist</p>
             <p>Cluj-Napoca, Cluj, Romania</p>
+
+             <!-- Formular pentru email -->
+        <form id="emailForm">
+            <input type="email" id="emailInput" placeholder="Introdu adresa ta de email" required>
+            <button type="submit">Devino prieten!</button>
+        </form>
+
+        <!-- Contor de prieteni -->
+        <div class="friend-counter">
+            <strong>Prieteni:</strong> <span id="friendCount">0</span>
+        </div>
+    </div>
+
+    <script>
+         let friends = [];
+
+        // Count friends
+        function updateFriendCount() {
+            const friendCountElement = document.getElementById('friendCount');
+            friendCountElement.textContent = friends.length;
+        }
+
+               const emailForm = document.getElementById('emailForm');
+        emailForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Previne reîncărcarea paginii
+
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value.trim();
+
+            if (email && !friends.includes(email)) {
+                friends.push(email); 
+                updateFriendCount(); 
+                emailInput.value = ''; 
+                alert('Thanks for connecting!'); 
+            } else {
+                alert('The email address was already registered');
+            }
+        });
+
+        // Inițializăm contorul la încărcarea paginii
+        updateFriendCount();
+    </script>
+
         </header>
 
         <!-- Contact Info -->
